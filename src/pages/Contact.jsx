@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 import './style.css';
 
 const Contact = () => {
@@ -11,33 +12,28 @@ const Contact = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  }
+  };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      const res = await fetch("https://portfolio-backend-fqc0.onrender.com/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
+    emailjs.send("service_knq4wao", "template_2dngi7x", {
+      from_name: formData.name,
+      reply_to: formData.email,
+      message: formData.message,
+    }, "lXQGheXTTcA4j8lfv")
 
-      const data = await res.json();
-
-      if (data.success) {
+      .then(() => {
         alert("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
-      } else {
-        alert("Failed to send message: " + data.message);
-      }
-    } catch (err) {
-      alert("Error sending message: " + err.message);
-    } finally {
-      setLoading(false);
-    }
-  }
+      })
+      .catch((error) => {
+        console.error("Email send error:", error);
+        alert("Failed to send message. Please try again later.");
+      })
+      .finally(() => setLoading(false));
+  };
 
   return (
     <div className='contact-section' id='contact'>
@@ -76,7 +72,7 @@ const Contact = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Contact;

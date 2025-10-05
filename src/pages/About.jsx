@@ -5,7 +5,7 @@ const About =() => {
       <h2 className="about-title">About Me</h2>
       <br />
       <div className='about-section'>
-        <img src="chihiro.jpg" alt="profile" />
+        <img src="/PROFESSIONAL IMAGE.png" alt="profile" />
         <div className='about-text'>
 
           <p >
