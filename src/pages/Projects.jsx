@@ -3,23 +3,23 @@ import './style.css'
 const Projects = () => {
   const projectList = [
     {
-      title: "Volume Control by hand",
-      tech: "Python,Opencv,Mediapipe",
-      description: "This project recognise the space between index and the thumb and adjust the volume of the device correspondingly.",
-      github: "https://github.com/SOBIKASM/Volume-control-with-hand",
+      title: "Sign Language Recognition",
+      tech: "Python,Opencv,Mediapipe,Tensorflow",
+      description: "The webcam input is captured and the trained model predicts the Alphabets in American Sign Language and written logic maps it to Indian Sign Language.",
+      github: "https://github.com/SOBIKASM/TALK-WITH-HANDS-backend",
       img: "https://tse3.mm.bing.net/th/id/OIP.K968ye3grQd_A4PjQ2ldngHaEK?pid=Api&P=0&h=180"
     },
     {
-      title: "Count the fingers",
-      tech: "Python,Opencv,Mediapipe",
-      description: "The webcam input is captured and the fingers which opened are counted and the result is the count of fingers in hand.",
-      github: "https://github.com/SOBIKASM/FIngerCountRightHand",
+      title: "Gesture control  projects",
+      tech: "Python,Opencv",
+      description: "These include few cv projects. They are ,Counting fingers in hands , Volume control using thumb and fore finger ,Virtual mouse ",
+      github: "https://github.com/SOBIKASM/Hand-Gesture-Projects",
       img: "https://tse2.mm.bing.net/th/id/OIP.UDLULN5ar9ZqNSctwOH5DAHaEK?pid=Api&P=0&h=180"
     },
     {
       title: "A fact learning website",
       tech: "React.js,MongoDB,Node,js,Express.js",
-      description: "This website gives curious minds a place to learn about stars,galaxies,constellations,perodic table and countries around the world in one place.",
+      description: "Developed an interactive learning website offering information on stars, galaxies, constellations, periodic table, and world countries in one platform.",
       github: "https://github.com/SOBIKASM/happyLearning",
       img: "./Country page.png"
     }

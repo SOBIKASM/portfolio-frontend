@@ -8,7 +8,7 @@ const Resume = () => {
   const downloadResume = async () => {
     setLoading(true); // start loading
     try {
-      const response = await fetch("/SOBIKASM resume.pdf");
+      const response = await fetch("/RESUME.pdf");
       if (!response.ok) throw new Error("Network response was not ok");
       
       const blob = await response.blob();
@@ -16,7 +16,7 @@ const Resume = () => {
 
       const a = document.createElement("a");
       a.href = url;
-      a.download = "SOBIKASM_resume.pdf";
+      a.download = "RESUME.pdf";
       document.body.appendChild(a);
       a.click();
       a.remove();

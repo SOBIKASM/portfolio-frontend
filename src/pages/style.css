@@ -165,7 +165,7 @@ ul li:hover {
 
 .github-link {
   display: inline-block;
-  margin-top: 12px;
+  margin: 12px;
   padding: 6px 12px;
   background-color: #462463;
   color: white;
