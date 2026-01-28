@@ -67,34 +67,62 @@ h2{
   }
 }
 
-/* ==== SKILLS==== */
+/* ==== SKILLS ==== */
 .skill-container {
-
   padding: 48px 32px;
-  color: black;
-  background-color: rgba(255,255,255,0.87);
+  background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
+  color: black;
   text-align: center;
 }
 
-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
+.skill-title {
+  font-size: 2rem;
+  margin-bottom: 32px;
 }
 
-ul li {
+/* Grid layout */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* Category card */
+.skill-card {
+  background: rgba(214, 191, 232, 0.35); /* soft purple */
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.skill-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #462463;
+}
+
+/* Scoped list – no global ul issues */
+.skill-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Skill chips */
+.skill-item {
   background-color: #462463;
-  color:white;
-  padding: 8px 6px;
+  color: white;
+  padding: 8px 12px;
   border-radius: 8px;
+  font-size: 0.85rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-ul li:hover {
-  transform: translateY(-5px);
+.skill-item:hover {
+  transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
